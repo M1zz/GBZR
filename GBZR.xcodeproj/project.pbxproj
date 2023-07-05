@@ -7,21 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D81CBF526F9CB640074120D /* WWDCKeynote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81CBF426F9CB640074120D /* WWDCKeynote.swift */; };
+		3D81CBF526F9CB640074120D /* CurriculumRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81CBF426F9CB640074120D /* CurriculumRoadmap.swift */; };
 		3DD5F2FA26F8A81200AC673E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2F926F8A81200AC673E /* App.swift */; };
-		3DD5F2FC26F8A81200AC673E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2FB26F8A81200AC673E /* ContentView.swift */; };
-		3DD5F2FE26F8A81300AC673E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5F2FD26F8A81300AC673E /* Assets.xcassets */; };
+		3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2FB26F8A81200AC673E /* MainList.swift */; };
 		583FA9C02A50784700B722FB /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 583FA9BF2A50784700B722FB /* YouTubePlayerKit */; };
+		5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5872DA5F2A55B72E003814E1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D81CBF426F9CB640074120D /* WWDCKeynote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCKeynote.swift; sourceTree = "<group>"; };
+		3D81CBF426F9CB640074120D /* CurriculumRoadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumRoadmap.swift; sourceTree = "<group>"; };
 		3DD5F2F626F8A81200AC673E /* GBZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBZR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD5F2F926F8A81200AC673E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		3DD5F2FB26F8A81200AC673E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3DD5F2FD26F8A81300AC673E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3DD5F30226F8A81300AC673E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DD5F30926F8A89E00AC673E /* YouTubePlayerKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = YouTubePlayerKit; path = ..; sourceTree = "<group>"; };
+		3DD5F2FB26F8A81200AC673E /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		3DD5F30926F8A89E00AC673E /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
+		5872DA5F2A55B72E003814E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +41,7 @@
 				3DD5F2F826F8A81200AC673E /* GBZR */,
 				3DD5F2F726F8A81200AC673E /* Products */,
 				3DD5F30A26F8A8A600AC673E /* Frameworks */,
-				3DD5F30926F8A89E00AC673E /* YouTubePlayerKit */,
+				3DD5F30926F8A89E00AC673E /*  */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				3DD5F2F926F8A81200AC673E /* App.swift */,
-				3DD5F2FB26F8A81200AC673E /* ContentView.swift */,
-				3D81CBF426F9CB640074120D /* WWDCKeynote.swift */,
+				3DD5F2FB26F8A81200AC673E /* MainList.swift */,
+				3D81CBF426F9CB640074120D /* CurriculumRoadmap.swift */,
+				5872DA5F2A55B72E003814E1 /* Assets.xcassets */,
 				3DD5F30826F8A87800AC673E /* Resources */,
 			);
 			path = GBZR;
@@ -68,8 +68,6 @@
 		3DD5F30826F8A87800AC673E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3DD5F2FD26F8A81300AC673E /* Assets.xcassets */,
-				3DD5F30226F8A81300AC673E /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -145,7 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD5F2FE26F8A81300AC673E /* Assets.xcassets in Resources */,
+				5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D81CBF526F9CB640074120D /* WWDCKeynote.swift in Sources */,
-				3DD5F2FC26F8A81200AC673E /* ContentView.swift in Sources */,
+				3D81CBF526F9CB640074120D /* CurriculumRoadmap.swift in Sources */,
+				3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */,
 				3DD5F2FA26F8A81200AC673E /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,11 +286,12 @@
 		3DD5F30626F8A81300AC673E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GBZR/Resources/Info.plist;
@@ -317,11 +316,12 @@
 		3DD5F30726F8A81300AC673E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GBZR/Resources/Info.plist;

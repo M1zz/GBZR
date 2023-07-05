@@ -20,7 +20,7 @@ extension App: SwiftUI.App {
     /// The content and behavior of the app
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainList()
         }
     }
     
