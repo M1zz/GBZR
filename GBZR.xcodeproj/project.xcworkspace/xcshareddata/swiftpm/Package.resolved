@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaywcjlove/markdown",
+      "state" : {
+        "branch" : "main",
+        "revision" : "56772c6a767c2a195bb5035bfecf11633c81cc7e"
+      }
+    },
+    {
       "identity" : "youtubeplayerkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SvenTiigi/YouTubePlayerKit.git",

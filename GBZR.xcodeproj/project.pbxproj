@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,9 @@
 		3DD5F2FA26F8A81200AC673E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2F926F8A81200AC673E /* App.swift */; };
 		3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2FB26F8A81200AC673E /* MainList.swift */; };
 		583FA9C02A50784700B722FB /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 583FA9BF2A50784700B722FB /* YouTubePlayerKit */; };
+		58446A302A5BCF9D001CC9D1 /* MarkdownLeeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */; };
 		5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5872DA5F2A55B72E003814E1 /* Assets.xcassets */; };
+		58DA81FA2A5BE24D00B42313 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 58DA81F92A5BE24D00B42313 /* Markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +22,9 @@
 		3DD5F2F926F8A81200AC673E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		3DD5F2FB26F8A81200AC673E /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		3DD5F30926F8A89E00AC673E /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
+		58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownLeeo.swift; sourceTree = "<group>"; };
 		5872DA5F2A55B72E003814E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58DA81FB2A5BE2E700B42313 /* GBZR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GBZR.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				583FA9C02A50784700B722FB /* YouTubePlayerKit in Frameworks */,
+				58DA81FA2A5BE24D00B42313 /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +61,10 @@
 		3DD5F2F826F8A81200AC673E /* GBZR */ = {
 			isa = PBXGroup;
 			children = (
+				58DA81FD2A5D365100B42313 /* Screen */,
+				58DA81FC2A5D364800B42313 /* Model */,
+				58DA81FB2A5BE2E700B42313 /* GBZR.entitlements */,
 				3DD5F2F926F8A81200AC673E /* App.swift */,
-				3DD5F2FB26F8A81200AC673E /* MainList.swift */,
-				3D81CBF426F9CB640074120D /* CurriculumRoadmap.swift */,
 				5872DA5F2A55B72E003814E1 /* Assets.xcassets */,
 				3DD5F30826F8A87800AC673E /* Resources */,
 			);
@@ -79,6 +85,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		58DA81FC2A5D364800B42313 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D81CBF426F9CB640074120D /* CurriculumRoadmap.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58DA81FD2A5D365100B42313 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */,
+				3DD5F2FB26F8A81200AC673E /* MainList.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,6 +120,7 @@
 			name = GBZR;
 			packageProductDependencies = (
 				583FA9BF2A50784700B722FB /* YouTubePlayerKit */,
+				58DA81F92A5BE24D00B42313 /* Markdown */,
 			);
 			productName = Example;
 			productReference = 3DD5F2F626F8A81200AC673E /* GBZR.app */;
@@ -128,6 +152,7 @@
 			mainGroup = 3DD5F2ED26F8A81200AC673E;
 			packageReferences = (
 				583FA9BE2A50784700B722FB /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+				58DA81F82A5BE24D00B42313 /* XCRemoteSwiftPackageReference "markdown" */,
 			);
 			productRefGroup = 3DD5F2F726F8A81200AC673E /* Products */;
 			projectDirPath = "";
@@ -154,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58446A302A5BCF9D001CC9D1 /* MarkdownLeeo.swift in Sources */,
 				3D81CBF526F9CB640074120D /* CurriculumRoadmap.swift in Sources */,
 				3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */,
 				3DD5F2FA26F8A81200AC673E /* App.swift in Sources */,
@@ -289,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GBZR/GBZR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
@@ -319,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GBZR/GBZR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
@@ -375,6 +403,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		58DA81F82A5BE24D00B42313 /* XCRemoteSwiftPackageReference "markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaywcjlove/markdown";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -382,6 +418,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 583FA9BE2A50784700B722FB /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
 			productName = YouTubePlayerKit;
+		};
+		58DA81F92A5BE24D00B42313 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DA81F82A5BE24D00B42313 /* XCRemoteSwiftPackageReference "markdown" */;
+			productName = Markdown;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

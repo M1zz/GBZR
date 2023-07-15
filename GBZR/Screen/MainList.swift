@@ -47,53 +47,47 @@ struct MainList {
 // MARK: - View
 
 extension MainList: View {
-    
-    /// The content and behavior of the view
     var body: some View {
         NavigationSplitView {
 #if os(macOS)
             List(filteredDatas, selection: $selectedId) { curriculum in
                 Text(curriculum.course.displayName)
                     .tag(curriculum.curriculumId)
-            }.searchable(text: $searchText, placement: .sidebar)
+                    .frame(alignment: .leading)
+            }
+            .searchable(text: $searchText, placement: .sidebar)
+            .navigationSplitViewColumnWidth(min: 200 ,ideal: 300, max: 400)
 #elseif os(iOS)
             List(filteredDatas) { curriculum in
                 Text(curriculum.course.displayName)
             }.searchable(text: $searchText, placement: .sidebar)
 #endif
-        } detail: {
+        }
+        
+    detail: {
             NavigationStack {
                 List(roadmaps[selectedId].videos) { video in
                     NavigationLink {
-                        YouTubePlayerView(
+                        VStack {
+                            YouTubePlayerView(
+                                
+                                YouTubePlayer(
+                                    source: .url(video.URLString)
+                                ),
+                                placeholderOverlay: {
+                                    ProgressView()
+                                }
+                            )
                             
-                            YouTubePlayer(
-                                source: .url(video.URLString)
-                            ),
-                            placeholderOverlay: {
-                                ProgressView()
-                            }
-                        )
-                        .frame(width: 800, height: 600)
+                            
+                            MarkdownLeeo()
+                        }
+                        .frame(width: 700)
                     } label: {
                         Text(video.title)
                     }
-                    
-                    
                 }
             }
-            
-            //            YouTubePlayerView(
-            //
-            //                YouTubePlayer(
-            //                    source: .url("https://www.youtube.com/embed/3WxdD-z7-Sc")
-            //                ),
-            ////                self.youTubePlayer,
-            //                placeholderOverlay: {
-            //                    ProgressView()
-            //                }
-            //            )
-            //            .frame(width: 800, height: 600)
         }
     }
     
