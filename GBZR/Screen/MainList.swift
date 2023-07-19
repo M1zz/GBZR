@@ -12,16 +12,6 @@ import YouTubePlayerKit
 
 /// The ContentView
 struct MainList {
-    
-    /// The YouTube Player
-    //    private let youTubePlayer = YouTubePlayer(
-    //        source: .url("https://www.youtube.com/embed/3WxdD-z7-Sc")
-    //    )
-    
-    /// All  WWDC Keynotes
-    private let wwdcKeynotes: [CurriculumRoadmap] = CurriculumRoadmap.all.sorted(by: >)
-    
-    /// The color scheme
     @Environment(\.colorScheme)
     private var colorScheme
     
@@ -37,13 +27,6 @@ struct MainList {
         }
     }
 }
-
-//struct Video: Identifiable {
-//    let id = UUID()
-//    let title: String
-//    let category: String
-//}
-
 // MARK: - View
 
 extension MainList: View {
@@ -53,7 +36,6 @@ extension MainList: View {
             List(filteredDatas, selection: $selectedId) { curriculum in
                 Text(curriculum.course.displayName)
                     .tag(curriculum.curriculumId)
-                    .frame(alignment: .leading)
             }
             .searchable(text: $searchText, placement: .sidebar)
             .navigationSplitViewColumnWidth(min: 200 ,ideal: 300, max: 400)
@@ -65,30 +47,38 @@ extension MainList: View {
         }
         
     detail: {
-            NavigationStack {
-                List(roadmaps[selectedId].videos) { video in
-                    NavigationLink {
-                        VStack {
-                            YouTubePlayerView(
-                                
-                                YouTubePlayer(
-                                    source: .url(video.URLString)
-                                ),
-                                placeholderOverlay: {
-                                    ProgressView()
-                                }
-                            )
+        NavigationStack {
+            List(roadmaps[selectedId].videos) { video in
+                NavigationLink {
+                    VStack {
+                        YouTubePlayerView(
                             
-                            
-                            MarkdownLeeo()
-                        }
-                        .frame(width: 700)
-                    } label: {
+                            YouTubePlayer(
+                                source: .url(video.URLString)
+                            ),
+                            placeholderOverlay: {
+                                ProgressView()
+                            }
+                        )
+                        
+                        
+                        MarkdownLeeo(fileName: video.fileName)
+                    }
+                    .frame(width: 700)
+                } label: {
+                    HStack {
                         Text(video.title)
+                            .frame(height: 40, alignment: .leading)
+                            .font(.title3)
+                            .bold()
+                        Spacer()
+                        Image(systemName: "chevron.right")
                     }
                 }
+                .frame(minWidth: 500)
+                .listRowBackground(video.id % 2 == 0 ? Color.gray.opacity(0.1) : Color.clear)
             }
         }
     }
-    
+    }
 }

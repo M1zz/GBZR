@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F2FB26F8A81200AC673E /* MainList.swift */; };
 		583FA9C02A50784700B722FB /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 583FA9BF2A50784700B722FB /* YouTubePlayerKit */; };
 		58446A302A5BCF9D001CC9D1 /* MarkdownLeeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */; };
+		5852E9852A631EB300D6FD79 /* 01.md in Resources */ = {isa = PBXBuildFile; fileRef = 5848943D2A631D86004AD93C /* 01.md */; };
 		5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5872DA5F2A55B72E003814E1 /* Assets.xcassets */; };
 		58DA81FA2A5BE24D00B42313 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 58DA81F92A5BE24D00B42313 /* Markdown */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		3DD5F2FB26F8A81200AC673E /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		3DD5F30926F8A89E00AC673E /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 		58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownLeeo.swift; sourceTree = "<group>"; };
+		5848943D2A631D86004AD93C /* 01.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 01.md; sourceTree = "<group>"; };
 		5872DA5F2A55B72E003814E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DA81FB2A5BE2E700B42313 /* GBZR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GBZR.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		3DD5F30826F8A87800AC673E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5848943D2A631D86004AD93C /* 01.md */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */,
+				5852E9852A631EB300D6FD79 /* 01.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +247,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -300,6 +305,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -318,16 +324,20 @@
 				CODE_SIGN_ENTITLEMENTS = GBZR/GBZR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GBZR/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "개발자리";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.GBJR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -349,16 +359,20 @@
 				CODE_SIGN_ENTITLEMENTS = GBZR/GBZR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GBZR/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GBZR/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "개발자리";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.GBJR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

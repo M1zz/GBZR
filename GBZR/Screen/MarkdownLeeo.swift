@@ -10,7 +10,7 @@ import Markdown
 
 struct MarkdownLeeo: View {
     
-
+    var fileName: String
     @State private var content = """
       This screen demonstrates how you can integrate a 3rd party library
       to render syntax-highlighted code blocks.
@@ -57,15 +57,42 @@ struct MarkdownLeeo: View {
       }
       ```
       """
+    @State private var content2 = ""
 
     var body: some View {
-        Markdown(content: $content)
-            .markdownStyle(
-                  MarkdownStyle(
-                    padding: 0, paddingTop: 115, paddingBottom: 2, paddingLeft: 50, paddingRight: 50
-                  )
-              )
-            .background(.blue)
+//        Markdown(content: $content)
+//            .markdownStyle(
+//                  MarkdownStyle(
+//                    padding: 0, paddingTop: 115, paddingBottom: 2, paddingLeft: 50, paddingRight: 50
+//                  )
+//              )
+//            .background(.blue)
+        Markdown(content: $content2)
+                    .markdownStyle(
+                          MarkdownStyle(
+                            padding: 0, paddingTop: 115, paddingBottom: 2, paddingLeft: 50, paddingRight: 50
+                          )
+                      )
+                    .background(.blue)
+                    .onAppear {
+                        do {
+                            if let fileURL = Bundle.main.url(forResource: fileName, withExtension: "md") {
+                                // Read the file Data
+                                let data = try Data(contentsOf: fileURL)
+
+                                // Convert the Data to a String
+                                let str = String(data: data, encoding: .utf8)
+                                content2 = str ?? "error"
+                                // Optional: Print the string
+                                print(str ?? "No string found in file")
+                            } else {
+                                print("File not found")
+                            }
+                        } catch let error {
+                            // Handle errors here
+                            print("Error reading file: \(error)")
+                        }
+                    }
     }
 
     
@@ -78,7 +105,7 @@ struct MarkdownLeeo: View {
 
 struct MarkdownLeeo_Previews: PreviewProvider {
     static var previews: some View {
-        MarkdownLeeo()
+        MarkdownLeeo(fileName: "01")
     }
 }
 
