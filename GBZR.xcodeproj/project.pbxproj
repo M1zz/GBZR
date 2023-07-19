@@ -14,6 +14,7 @@
 		58446A302A5BCF9D001CC9D1 /* MarkdownLeeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */; };
 		5852E9852A631EB300D6FD79 /* 01.md in Resources */ = {isa = PBXBuildFile; fileRef = 5848943D2A631D86004AD93C /* 01.md */; };
 		5872DA602A55B72E003814E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5872DA5F2A55B72E003814E1 /* Assets.xcassets */; };
+		58D688AA2A68500D00D6664E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D688A92A68500D00D6664E /* HomeView.swift */; };
 		58DA81FA2A5BE24D00B42313 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 58DA81F92A5BE24D00B42313 /* Markdown */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownLeeo.swift; sourceTree = "<group>"; };
 		5848943D2A631D86004AD93C /* 01.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 01.md; sourceTree = "<group>"; };
 		5872DA5F2A55B72E003814E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58D688A92A68500D00D6664E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		58DA81FB2A5BE2E700B42313 /* GBZR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GBZR.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			children = (
 				58446A2F2A5BCF9D001CC9D1 /* MarkdownLeeo.swift */,
 				3DD5F2FB26F8A81200AC673E /* MainList.swift */,
+				58D688A92A68500D00D6664E /* HomeView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				58446A302A5BCF9D001CC9D1 /* MarkdownLeeo.swift in Sources */,
 				3D81CBF526F9CB640074120D /* CurriculumRoadmap.swift in Sources */,
 				3DD5F2FC26F8A81200AC673E /* MainList.swift in Sources */,
+				58D688AA2A68500D00D6664E /* HomeView.swift in Sources */,
 				3DD5F2FA26F8A81200AC673E /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

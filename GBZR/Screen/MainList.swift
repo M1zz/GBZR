@@ -15,8 +15,11 @@ struct MainList {
     @Environment(\.colorScheme)
     private var colorScheme
     
-    @State var selectedId: Int = 0
+    @State var selectedId: Int = -1
     @State var searchText: String = ""
+    @State var contents: [Content] = [Content(contentType: .home),
+                                      Content(contentType: .course,
+                                              roadMaps: CurriculumRoadmap.all)]
     @State var roadmaps: [CurriculumRoadmap] = CurriculumRoadmap.all
     
     var filteredDatas: [CurriculumRoadmap] {
@@ -33,9 +36,22 @@ extension MainList: View {
     var body: some View {
         NavigationSplitView {
 #if os(macOS)
-            List(filteredDatas, selection: $selectedId) { curriculum in
-                Text(curriculum.course.displayName)
-                    .tag(curriculum.curriculumId)
+            List(contents, selection: $selectedId) { content in
+                
+                switch content.contentType {
+                case .home :
+                    Section("홈") {
+                        Text("홈")
+                            .tag(-1)
+                    }
+                case .course :
+                    Section("강의") {
+                        ForEach(filteredDatas, id: \.self) { curriculum in
+                            Text(curriculum.course.displayName)
+                                .tag(curriculum.curriculumId)
+                        }
+                    }
+                }
             }
             .searchable(text: $searchText, placement: .sidebar)
             .navigationSplitViewColumnWidth(min: 200 ,ideal: 300, max: 400)
@@ -47,37 +63,42 @@ extension MainList: View {
         }
         
     detail: {
-        NavigationStack {
-            List(roadmaps[selectedId].videos) { video in
-                NavigationLink {
-                    VStack {
-                        YouTubePlayerView(
+        if selectedId > -1 {
+            NavigationStack {
+                List(roadmaps[selectedId].videos) { video in
+                    NavigationLink {
+                        VStack {
+                            YouTubePlayerView(
+                                
+                                YouTubePlayer(
+                                    source: .url(video.URLString)
+                                ),
+                                placeholderOverlay: {
+                                    ProgressView()
+                                }
+                            )
                             
-                            YouTubePlayer(
-                                source: .url(video.URLString)
-                            ),
-                            placeholderOverlay: {
-                                ProgressView()
-                            }
-                        )
-                        
-                        
-                        MarkdownLeeo(fileName: video.fileName)
+                            
+                            MarkdownLeeo(fileName: video.fileName)
+                        }
+                        .frame(width: 700)
+                    } label: {
+                        HStack {
+                            Text(video.title)
+                                .frame(height: 40, alignment: .leading)
+                                .font(.title3)
+                                .bold()
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                        }
                     }
-                    .frame(width: 700)
-                } label: {
-                    HStack {
-                        Text(video.title)
-                            .frame(height: 40, alignment: .leading)
-                            .font(.title3)
-                            .bold()
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
+                    .frame(minWidth: 500)
+                    .listRowBackground(video.id % 2 == 0 ? Color.gray.opacity(0.1) : Color.clear)
                 }
-                .frame(minWidth: 500)
-                .listRowBackground(video.id % 2 == 0 ? Color.gray.opacity(0.1) : Color.clear)
             }
+        }
+        else {
+            HomeView()
         }
     }
     }

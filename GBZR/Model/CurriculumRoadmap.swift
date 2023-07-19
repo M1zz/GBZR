@@ -13,6 +13,17 @@ import Foundation
 
 // MARK: - CurriculumRoadmap
 
+struct Content: Identifiable {
+    let id = UUID()
+    let contentType: ContentType
+    var roadMaps: [CurriculumRoadmap]? = nil
+}
+
+enum ContentType {
+    case home
+    case course
+}
+
 struct CurriculumRoadmap: Codable, Hashable, Identifiable, Comparable {
     
     let curriculumId: Int
@@ -30,7 +41,6 @@ struct CurriculumRoadmap: Codable, Hashable, Identifiable, Comparable {
         case eightDaysBasic
         case allSwift
         case dailySwiftUI
-        case test
         
         var displayName: String {
             switch self {
@@ -40,8 +50,6 @@ struct CurriculumRoadmap: Codable, Hashable, Identifiable, Comparable {
                 return "SwiftUI로 배우는 Swift 문법"
             case .dailySwiftUI:
                 return "매일매일 공부하는 SwiftUI"
-            case .test:
-                return "케이스 테스트 입니다"
             }
         }
     }
@@ -49,9 +57,9 @@ struct CurriculumRoadmap: Codable, Hashable, Identifiable, Comparable {
     // Predefined constants
     static let all: [Self] = [
         .sevenDaysBasic,
-            .allSwift,
-            .dailySwiftUI,
-                              //.test
+        .allSwift,
+        .dailySwiftUI,
+        //.test
     ]
 }
 
@@ -81,6 +89,7 @@ struct Video: Identifiable, Codable, Hashable {
 // MARK: - Predefined CurriculumRoadmaps
 
 extension CurriculumRoadmap {
+    
     static let sevenDaysBasic: Self = .init(
         curriculumId: 0,
         course: .eightDaysBasic,
@@ -138,10 +147,4 @@ extension CurriculumRoadmap {
                   fileName: "01"),
         ]
     )
-    
-//    static let test: Self = .init(
-//        curriculumId: 3,
-//        course: .test,
-//        videos: []
-//    )
 }
